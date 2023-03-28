@@ -9,5 +9,5 @@
 	* To intall WSL2 you will need to open your windows cmd terminal and run this command `wsl –install`
 	* To install docker you will first need to download and install docker desktop.
 		* after following the basic install instructions you need to go into settings -> General -> select the use WSL2 based engine box -> apply and Restart
-	* To build an image from the docker file you will first ofcourse have to kva emade a docker file and put in whatever directory your choose. usually would be a project folder or something of the like. THen you will need to run a docker build command that builds the contianer fro mthe file like so `sudo docker build -t "image name" .`
-		* the `.` at the end of the comamnd is in reference to the directory. for me I used `.` because i was already cd in the directory that contained the docker file other wise you would have to replace the dot with the path to said directory adn docker file
+	* To build an image from the docker file you will first, of course have to have made a docker file and put in whatever directory you choose. usually would be a project folder or something of the like. Then you will need to run a docker build command that builds the contianer from the file like so `sudo docker build -t "image name" .`
+		* the `.` at the end of the comamnd is in reference to the directory. for me I used `.` because i was already cd in the directory that contained the docker file other wise you would have to replace the dot with the path to said directory and docker file
