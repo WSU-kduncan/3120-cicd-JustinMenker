@@ -28,3 +28,7 @@
 
 - How to push container image to Dockerhub (without github actions)
 	* To push an image to docker hub without github actions all you need to do is retag your image with something appropriate for the destination that it is being pushed to aka your docker hub repository which will be public. You can do this by running a command like this `docker tag imagename:tag dockerhubusername/newname:newtag` -> then you just need to run the docker push command like so `docker push dockerhubusername/newname:newtag` this will take a minute, when it is done you shouldbe able to referesh your repository page on dockerhub and see the new push
+
+- Configuring Github secrets
+	* To set a github secret you simply need to head over to your github repository via giithub website and click your repository settings -> then click the secrets and variables option on the side bar. This will open adrop down menu -> then click the actions option -> From there you will need to click a green button called new repository secret -> you will then be promted for the name of the secret which acts as like a variable name and then to fill in said secret -> Next you will need to fill i nthe information just mentioned as appropriate for what you want your secret to be.
+	* The secrets we are setting for this project are two secrets, one for our dockerhub username and one for our dockerhub password. We are doing this so that we can reference that information in our workflows while not having them be exposed to anyone willing to dig for that information since it is a public repo
