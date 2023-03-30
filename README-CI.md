@@ -41,4 +41,4 @@
 
 - Continuous Integration Diagram
 
-![Diagram pdf](https://github.com/WSU-kduncan/3120-cicd-JustinMenker/blob/main/Project%204.pdf)
+* ![Diagram pdf](https://github.com/WSU-kduncan/3120-cicd-JustinMenker/blob/main/Project%204.pdf)
