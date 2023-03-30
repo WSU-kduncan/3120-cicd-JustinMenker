@@ -35,4 +35,10 @@
 
 - Behavior of Github workflow
 	* What does it do and when. This particular workflow we made for this project builds and pushes an image to dockerhub form the current dockerfile in the repo whenever a push is made to the github repo.
-	* The varibles that may need changed would be the secret that reference your dockerhub username and the one that references your dockerhub password, the tag section for that image being pushed, and maybe the runs-on section if perhaps your are not running on the latest verison of ubuntu or are not running this on ubuntu at all.
+	* The varibles that may need changed would be the secret that reference your dockerhub username and the one that references your dockerhub password, the tag section for that image being pushed, and maybe the runs-on section if perhaps your are not running on the latest verison of ubuntu or are not running this on ubuntu at all
+
+# Part 3
+
+- Continuous Integration Diagram
+
+![Diagram pdf](https://github.com/WSU-kduncan/3120-cicd-JustinMenker/blob/main/Project%204.pdf)
