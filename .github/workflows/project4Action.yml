@@ -12,6 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Collecting tag data
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            jmenker/project4
+          tags: |
+            type=semver,pattern={{major}}
+            type=semver,pattern={{major}}.{{minor}}
+      -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       -
@@ -27,5 +37,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
+          context: .
           push: true
-          tags: jmenker/project4:latest
+          tags: ${{ steps.meta.ouput.tags }}
+          labels: ${{ steps.meta.ouput.labels }}
