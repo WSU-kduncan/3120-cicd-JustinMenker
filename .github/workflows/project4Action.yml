@@ -5,7 +5,7 @@ on:
     branches:
       - '*'
     tags: 
-    - '*'
+    - 'v*'
 
 jobs:
   docker:
@@ -37,7 +37,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          # context: .
+          context: .
           push: true
-          tags: ${{ steps.meta.ouput.tags }}
-          labels: ${{ steps.meta.ouput.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
