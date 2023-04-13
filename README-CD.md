@@ -29,3 +29,23 @@ sudo docker run --name upbeat_hermann  -d -p 80:80 jmenker/project4:latest
 ```
 * justification, I used one of the default names that docker gave me for a container and kept it. the first thing in the script is the shebang so that it knows what interpretor to run this code in, in this case that would be bash -> next is to stop the currently running container -> then remove that container you must do it in this order or else you will get an error that you cant remove a running container -> then we are pulling the latest image from dockerhub -> and last we are running the new contianer in detached on port 80 since we have webcontent.
 
+* where it should be using my setup, I set mine up to be in my home directory of the instance so if using my setup that is where yours should be. Ideally you would have it somewhere else that is more protected but for the purposes of this project that was where I put it
+
+- Setting up webhooks on instance
+	* to install adnanh's webhook you simply need to run this command `sudo apt-get install webhook` this will install it as a service which is helpful for later
+
+	* How to start the webhook, since we installed it as a service it should be runnign on instane startup however if it is not then you can run systemctl commands	`sudo systemctl start webhook.service` you can check if it is running or not by running `sudo systemctl status webhook.service`
+
+- Webhook task definition file
+```
+[
+  {
+    "id": "pizza",
+    "execute-command": "/home/ubuntu/redeploy.sh",
+    "command-working-directory": "/var/webhook"
+  }
+]
+```
+
+	* this task is using the pizza id as a way to uniquely identify our webhook process -> then we are executing our bash file located in the shown path directory, this bash file is what is running or "deployment" commands -> the last commad is self explanatory, we are just stating the command working directory.
+	* Where should it be, this task file for the webhook should be located the etc folder. for example the path on my instance would look like this `/etc/webhook.conf` and it must be named the same for the webhook service to pick up on it
