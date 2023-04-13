@@ -19,13 +19,13 @@
 	* To install docker on your instance it is as simple as running `sudo apt install docker.io`. you may need to runa `sudo apt-get update` before this as well
 
 - Container restart script
-`
+```
 #!/bin/bash
 
 sudo docker stop upbeat_hermann
 sudo docker rm upbeat_hermann
 sudo docker pull jmenker/project4:latest
 sudo docker run --name upbeat_hermann  -d -p 80:80 jmenker/project4:latest
-`
+```
 	* justification, I used one of the default names that docker gave me for a container and kept it. the first thing in the script is the shebang so that it knows what interpretor to run this code in, in this case that would be bash -> next is to stop the currently running container -> then remove that container you must do it in this order or else you will get an error that you cant remove a running container -> then we are pulling the latest image from dockerhub -> and last we are running the new contianer in detached on port 80 since we have webcontent.
 
