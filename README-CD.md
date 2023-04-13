@@ -48,6 +48,6 @@ sudo docker run --name upbeat_hermann  -d -p 80:80 jmenker/project4:latest
 ]
 ```
 
-	* this task is using the pizza id as a way to uniquely identify our webhook process -> then we are executing our bash file located in the shown path directory, this bash file is what is running or "deployment" commands -> the last commad is self explanatory, we are just stating the command working directory.
+* this task is using the pizza id as a way to uniquely identify our webhook process -> then we are executing our bash file located in the shown path directory, this bash file is what is running or "deployment" commands -> the last commad is self explanatory, we are just stating the command working directory.
 
-	* Where should it be, this task file for the webhook should be located the etc folder. for example the path on my instance would look like this `/etc/webhook.conf` and it must be named the same for the webhook service to pick up on it
+* Where should it be, this task file for the webhook should be located the etc folder. for example the path on my instance would look like this `/etc/webhook.conf` and it must be named the same for the webhook service to pick up on it
