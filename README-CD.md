@@ -56,4 +56,4 @@ sudo docker run --name upbeat_hermann  -d -p 80:80 jmenker/project4:latest
 
 	* for my project I used github to send a message on push events
 
-	* to do this you need to go to your github projetc repo settings and click the webhooks option on the sidebar -> then click new webhook -> then fill out the URL which will ook something like this `http://ip-address:9000/hooks/hook-id` -> then you have the option to make a secret which I did not -> lastly you need to set when github will send a message to hte webhook listener, I chose on push events which is the first option.
+	* to do this you need to go to your github projetc repo settings and click the webhooks option on the sidebar -> then click new webhook -> then fill out the URL which will ook something like this `http://ip-address:9000/hooks/hook-id` -> then you have the option to make a secret which I did not -> lastly you need to set when github will send a message to hte webhook listener, I chose on push events which is the first option...
